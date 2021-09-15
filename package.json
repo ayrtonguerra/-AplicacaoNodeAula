@@ -2,11 +2,11 @@
     "name": "node-api-heroku",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
       "start": "node index",
       "test": "jest --watchAll",
-      "test:ci": "jest --ci --coverage --coverageReporters=html --coverageReporters=lcov"
+      "test:ci": "jest --ci"
     },
     "keywords": [],
     "author": "",
