@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+
+<body>
+
+<p>Hello World! This is my first node.js application!</p>
+<button value="Habilitar campo" onclick="habilitarCampo()">Habilitar campo</button>
+<button value="Desabilitar campo" onclick="desabilitarCampo()">Desabilitar campo</button>
+<br/><br/>
+<form onsubmit="return false;" action="post">
+    <input type="text" placeholder="campo" name="campo" id="campo" />
+    <br/><br/>
+    <input type="submit" id="submitBtn" value="Mostrar valor do campo" onclick="mostrarValorCampo()"/>
+</form>
+
+<script>
+    function habilitarCampo(){
+        document.getElementById("campo").removeAttribute("disabled");
+        document.getElementById("submitBtn").removeAttribute("disabled");
+    }
+    function desabilitarCampo(){
+        document.getElementById("campo").setAttribute("disabled", "");
+        document.getElementById("submitBtn").setAttribute("disabled", "");
+    }
+    function mostrarValorCampo(value){
+        alert(document.querySelector("#campo").value);
+        return false;
+    }
+</script>
+</body>
+
+</html>
